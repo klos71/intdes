@@ -32,6 +32,11 @@ body {
   padding: 5px 10px; }
 
 #messages li:nth-child(odd) {
-  background: #eee; }
+  background: #eee;
+  color: #480006 !important; }
+
+#messages li:nth-child(even) {
+  background: #e3e3e3;
+  color: #004800 !important; }
 
 /*# sourceMappingURL=style.css.map */
