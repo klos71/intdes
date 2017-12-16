@@ -33,7 +33,7 @@ body {
 
 #messages li:nth-child(odd) {
   background: #eee;
-  color: #480006 !important; }
+  color: #3f3f9e !important; }
 
 #messages li:nth-child(even) {
   background: #e3e3e3;

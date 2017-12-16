@@ -26,7 +26,7 @@ else
 $('form').submit( function(){ 
 	if($('#m').val().trim() == "") return false;
 	
-	socket.emit('chat message', name + " : " + $('#m').val()); 
+	socket.emit('chat message', name + " " + $('#m').val()); 
 	$('#m').val('');
 	return false;
 });
