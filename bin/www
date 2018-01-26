@@ -23,8 +23,12 @@ var server = http.createServer(app);
 var io = require("socket.io").listen(server);
 
 io.on('connection', function(socket){
+	
+	io.on('disconnect', function(){io.emit('chat message', "A user disconnected");});
+	
     socket.on('chat message', function(msg){
-        io.emit('chat message', msg);
+		if(msg.trim() != "")
+			io.emit('chat message', msg);
     });
 });
 

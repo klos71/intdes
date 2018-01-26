@@ -1,9 +1,8 @@
 extends layout
 block content
-  ul(id="messages" class="w3-xxlarge")
-    form(action="", class="w3-large")
-      input(id="m" autocomplete="off",class="w3-large")
-      button(class="w3-large") Send
-  script $(function () {var socket = io(); $('form').submit(function(){ socket.emit('chat message', $('#m').val()); $('#m').val('');return false;});socket.on('chat message', function(msg){$('#messages').append($('<li>').text(msg));window.scrollTo(0, document.body.scrollHeight);});});
-
+	ul(id="messages" class="w3-xxlarge")
+		form(action="", class="w3-large")
+			input(id="m" autocomplete="off",class="w3-large")
+			button(class="w3-large") Send
+		script(src="./javascripts/clientchat.js")
 
